@@ -15,7 +15,7 @@
 ## Download from Github
 
 ```shell
-go get github.com/floostack/transcoder
+go get github.com/ahmadissa/transcoder
 ```
 
 ## Example
@@ -26,7 +26,7 @@ package main
 import (
 	"log"
 
-	ffmpeg "github.com/floostack/transcoder/ffmpeg"
+	ffmpeg "github.com/ahmadissa/transcoder/ffmpeg"
 )
 
 func main() {
@@ -39,7 +39,7 @@ func main() {
 		Hwaccel:      &hwaccel,
 		VideoCodec:   &videoCodec,
 	}
-	
+
 	format := "mp4"
 	overwrite := true
 
