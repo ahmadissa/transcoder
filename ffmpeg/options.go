@@ -57,6 +57,7 @@ type Options struct {
 	AudioFilter           *string           `flag:"-af"`
 	SkipVideo             *bool             `flag:"-vn"`
 	SkipAudio             *bool             `flag:"-an"`
+	SkipData              *bool             `flag:"-dn"`
 	CompressionLevel      *int              `flag:"-compression_level"`
 	MapMetadata           *string           `flag:"-map_metadata"`
 	Metadata              map[string]string `flag:"-metadata"`
@@ -102,7 +103,7 @@ func (opts Options) GetStrArguments() []string {
 					values = append(values, k, fmt.Sprintf("%v", v))
 				}
 			}
-			
+
 			if vi, ok := value.(*int); ok {
 				values = append(values, flag, fmt.Sprintf("%d", *vi))
 			}
